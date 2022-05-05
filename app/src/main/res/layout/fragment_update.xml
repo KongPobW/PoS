@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|center_horizontal|center_vertical"
+    android:gravity="center|center_vertical">
+
+    <LinearLayout
+        android:layout_width="560dp"
+        android:layout_height="407dp"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/orID_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/order_ID"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/prID_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/product_ID"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/prNa_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/product_Na"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/quantity_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/quantity"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/subtotal_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/subtotal"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:text="@string/update"
+                android:textColor="#F4F4F4"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textColor="#F4F4F4"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

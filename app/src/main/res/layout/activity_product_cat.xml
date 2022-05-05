@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProductCatActivity">
+
+    <Button
+        android:id="@+id/btn_drink"
+        android:layout_width="378dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#70db70"
+        android:text="@string/drinks"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_macaron"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_dessert"
+        android:layout_width="378dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="44dp"
+        android:backgroundTint="#70db70"
+        android:text="@string/desserts"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_drink"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_fruit"
+        android:layout_width="378dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#70db70"
+        android:text="@string/fruits"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_thaidish"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dessert"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_macaron"
+        android:layout_width="378dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#70db70"
+        android:text="@string/macarons"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_icecream"
+        android:layout_width="378dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#70db70"
+        android:text="@string/icecreams"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_macaron"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_thaidish"
+        android:layout_width="378dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#70db70"
+        android:text="@string/thaidishes"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_icecream"
+        app:layout_constraintTop_toBottomOf="@+id/btn_drink"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

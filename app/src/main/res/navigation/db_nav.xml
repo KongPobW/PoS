@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/db_frag"
+    app:startDestination="@id/orderfrag">
+
+    <fragment
+        android:id="@+id/orderfrag"
+        android:name="com.example.pos.fragment.order.OrderFragment"
+        android:label="First"
+        tools:layout="@layout/fragment_order">
+        <action
+            android:id="@+id/action_order_Fragment_to_orderLine_Fragment"
+            app:destination="@id/orderlinefrag" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderlinefrag"
+        android:name="com.example.pos.fragment.order.OrderLineFragment"
+        android:label="Second"
+        tools:layout="@layout/fragment_orderline">
+        <action
+            android:id="@+id/action_orderLine_Fragment_to_update_Fragment"
+            app:destination="@id/updatefrag" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updatefrag"
+        android:name="com.example.pos.fragment.order.UpdateFragment"
+        android:label="update_frag"
+        tools:layout="@layout/fragment_update">
+    </fragment>
+</navigation>
