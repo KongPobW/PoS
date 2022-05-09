@@ -33,7 +33,7 @@ class OrderFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val url = "http://192.168.137.1/pos/pos_api/public/orders"
+        val url = "http://192.168.1.121/pos/pos_api/public/orders"
         val jsonRequest = JsonArrayRequest(Request.Method.GET, url, null, {
             response ->
 

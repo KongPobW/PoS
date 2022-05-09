@@ -45,7 +45,7 @@ class SettingActivity : AppCompatActivity() {
 
     var bitmap: Bitmap? = null
     var encodedImage: String? = null
-    val apiUrl = "http://192.168.137.1/pos/images/fileupload.php"
+    val apiUrl = "http://192.168.1.121/pos/images/fileupload.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -212,7 +212,7 @@ class SettingActivity : AppCompatActivity() {
 
             GlobalScope.launch {
 
-                var url = "http://192.168.137.1/pos/pos_api/public/orders"
+                var url = "http://192.168.1.121/pos/pos_api/public/orders"
                 var jsonRequest = JsonArrayRequest(Request.Method.GET, url, null,
                     { response ->
 
@@ -229,7 +229,7 @@ class SettingActivity : AppCompatActivity() {
                 jsonRequest.retryPolicy = DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, 0, 1f)
                 VolleySingleton.getInstance(applicationContext).addToRequestQueue(jsonRequest)
 
-                url = "http://192.168.137.1/pos/pos_api/public/orderlines"
+                url = "http://192.168.1.121/pos/pos_api/public/orderlines"
                 jsonRequest = JsonArrayRequest(Request.Method.GET, url, null,
                     { response ->
 
@@ -265,7 +265,7 @@ class SettingActivity : AppCompatActivity() {
                 val localOrderLines = getOrderLinesFromLocalDBAsync()
 
                 for (order in localOrders.await()) {
-                    val url = "http://192.168.137.1/pos/pos_api/public/order"
+                    val url = "http://192.168.1.121/pos/pos_api/public/order"
 
                     val params = JSONObject()
                     params.put("user_id", "${order.userID}")
@@ -285,7 +285,7 @@ class SettingActivity : AppCompatActivity() {
                 }
 
                 for (orderLine in localOrderLines.await()) {
-                    val url = "http://192.168.137.1/pos/pos_api/public/orderline"
+                    val url = "http://192.168.1.121/pos/pos_api/public/orderline"
 
                     val params = JSONObject()
                     params.put("order_id", "${orderLine.orderID}")

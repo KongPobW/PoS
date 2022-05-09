@@ -62,7 +62,7 @@ class UpdateFragment : Fragment() {
             val txt5 = subtotal_intent.text
 
             val queue = Volley.newRequestQueue(context)
-            val url = "http://192.168.137.1/pos/pos_api/public/orderline/${id}?order_id=${txt1}&user_id=${arg2}&product_id=${txt2}&product_name=${txt3}&quantity=${txt4}&subtotal=${txt5}"
+            val url = "http://192.168.1.121/pos/pos_api/public/orderline/${id}?order_id=${txt1}&user_id=${arg2}&product_id=${txt2}&product_name=${txt3}&quantity=${txt4}&subtotal=${txt5}"
             val stringRequest = StringRequest(Request.Method.PUT, url, {
                 response ->
                 Log.i("UpdateFragment", "Updated")

@@ -47,7 +47,7 @@ class OrderLineFragment : Fragment() {
     }
 
     private fun getData() {
-        val url = "http://192.168.137.1/pos/pos_api/public/orderlines"
+        val url = "http://192.168.1.121/pos/pos_api/public/orderlines"
         val jsonRequest = JsonArrayRequest(Request.Method.GET, url, null, { response ->
 
             for (i in 0 until response.length()) {
@@ -76,7 +76,7 @@ class OrderLineFragment : Fragment() {
                     println("orderlinesize" + orderlineSize)
                     if (orderlineSize == 1) {
                         val q1 = Volley.newRequestQueue(context)
-                        val u1 = "http://192.168.137.1/pos/pos_api/public/order/${orderlinedata.uid}"
+                        val u1 = "http://192.168.1.121/pos/pos_api/public/order/${orderlinedata.uid}"
                         val s1 = StringRequest(Request.Method.DELETE, u1, {
                             response ->
 
@@ -88,7 +88,7 @@ class OrderLineFragment : Fragment() {
                         q1.add(s1)
 
                         val q2 = Volley.newRequestQueue(context)
-                        val u2 = "http://192.168.137.1/pos/pos_api/public/orderline/${orderlinedata.id}"
+                        val u2 = "http://192.168.1.121/pos/pos_api/public/orderline/${orderlinedata.id}"
                         val s2 = StringRequest(Request.Method.DELETE, u2, {
                             response ->
 
@@ -104,7 +104,7 @@ class OrderLineFragment : Fragment() {
                         Log.i("OrderLineFragment", "No OrderLine in Array")
                     } else {
                         val q1 = Volley.newRequestQueue(context)
-                        val u1 = "http://192.168.137.1/pos/pos_api/public/orderline/${orderlinedata.id}"
+                        val u1 = "http://192.168.1.121/pos/pos_api/public/orderline/${orderlinedata.id}"
                         val s1 = StringRequest(Request.Method.DELETE, u1, {
                             response ->
 
